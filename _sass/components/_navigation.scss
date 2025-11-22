@@ -1,67 +1,110 @@
-// Navigation styles
+// Navigation styles - Pure CSS solution
 
 .site-navigation {
   color: $color-contrast-2;
   font-family: $font-family-system-sans;
   font-size: $font-size-small;
   line-height: inherit;
+  position: relative;
   
-  ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: $spacing-50;
+  // Hide the checkbox input
+  .nav-toggle-input {
+    display: none;
+  }
+  
+  // Hamburger menu button (label for checkbox)
+  .nav-toggle-label {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: $spacing-20;
+    gap: 4px;
+    margin-bottom: $spacing-30;
+    
+    .hamburger-line {
+      width: 24px;
+      height: 2px;
+      background-color: $color-contrast;
+      transition: all 0.3s ease;
+      display: block;
+    }
+    
+    &:hover .hamburger-line {
+      background-color: $color-contrast-2;
+    }
     
     @media (max-width: 768px) {
-      flex-direction: column;
-      gap: $spacing-30;
+      display: flex;
     }
   }
   
-  a {
+  // Animate hamburger to X when checked
+  .nav-toggle-input:checked + .nav-toggle-label {
+    .hamburger-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
+    }
+  }
+  
+  // Navigation menu
+  .nav-menu {
+    display: flex;
+    gap: $spacing-50;
+    
+    @media (max-width: 768px) {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      background: $color-base;
+      border: 1px solid $color-contrast-5;
+      border-radius: $border-radius-medium;
+      padding: $spacing-40;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      margin-top: $spacing-20;
+    }
+  }
+  
+  // Show menu when checkbox is checked
+  .nav-toggle-input:checked ~ .nav-menu {
+    @media (max-width: 768px) {
+      display: flex;
+    }
+  }
+  
+  // Navigation links
+  .nav-link {
     text-decoration: none;
     color: inherit;
+    padding: $spacing-20 0;
+    display: block;
     
     &:hover {
+      color: $color-contrast;
       text-decoration: underline;
     }
     
     &.current {
       color: $color-contrast;
+      font-weight: 600;
     }
-  }
-}
-
-// Mobile navigation toggle
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: $font-size-large;
-  color: $color-contrast;
-  cursor: pointer;
-  
-  @media (max-width: 768px) {
-    display: block;
-  }
-}
-
-.site-navigation ul {
-  @media (max-width: 768px) {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: $color-base;
-    border: 1px solid $color-contrast-5;
-    border-radius: $border-radius-medium;
-    padding: $spacing-50;
-    z-index: 1000;
     
-    &.active {
-      display: flex;
+    @media (max-width: 768px) {
+      padding: $spacing-30 0;
+      border-bottom: 1px solid $color-contrast-5;
+      
+      &:last-child {
+        border-bottom: none;
+      }
     }
   }
 }

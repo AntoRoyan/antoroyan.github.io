@@ -18,16 +18,34 @@
                         </div>
                         
                         <nav class="site-navigation" aria-label="Main Navigation">
-                            <ul>
+                            <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+                            <label for="nav-toggle" class="nav-toggle-label">
+                                <span class="hamburger-line"></span>
+                                <span class="hamburger-line"></span>
+                                <span class="hamburger-line"></span>
+                            </label>
+                            <div class="nav-menu">
                                 {% for nav_item in site.site_config.navigation %}
-                                <li>
-                                    <a href="{{ nav_item.url | relative_url }}" 
-                                       {% if page.url == nav_item.url %}class="current"{% endif %}>
-                                        {{ nav_item.title }}
-                                    </a>
-                                </li>
+                                <a href="{{ nav_item.url | relative_url }}" 
+                                   class="nav-link{% if page.url == nav_item.url %} current{% endif %}">
+                                    {{ nav_item.title }}
+                                </a>
                                 {% endfor %}
-                            </ul>
+                            </div>
+                            
+                            <script>
+                            // Inline JavaScript for immediate functionality
+                            document.addEventListener('DOMContentLoaded', function() {
+                                const navLinks = document.querySelectorAll('.nav-link');
+                                const navToggle = document.getElementById('nav-toggle');
+                                
+                                navLinks.forEach(function(link) {
+                                    link.addEventListener('click', function() {
+                                        navToggle.checked = false;
+                                    });
+                                });
+                            });
+                            </script>
                         </nav>
                     </div>
                 </div>

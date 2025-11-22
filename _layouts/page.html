@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="content-container wide">
+    {% unless page.hide_title %}
+    <header class="page-header">
+        <h1 class="page-title">{{ page.title | escape }}</h1>
+    </header>
+    {% endunless %}
+    
+    <div class="page-content">
+        {{ content }}
+    </div>
+</div>

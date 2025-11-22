@@ -1,0 +1,193 @@
+// Base styles
+// Converted from WordPress theme and style.css
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: $font-family-body;
+  font-size: $font-size-medium;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $color-contrast;
+  background-color: $color-base;
+  padding-left: $spacing-body-margin;
+  padding-right: $spacing-body-margin;
+}
+
+// Reset margins for first elements
+:where(.site-content) > * {
+  margin-block-start: 0;
+}
+
+// Links
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+  transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear, opacity 0.1s linear;
+  
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Buttons base
+.button, 
+button,
+input[type="submit"],
+input[type="button"] {
+  border: 1px solid currentColor;
+  border-radius: $border-radius-small;
+  color: $color-base;
+  background-color: $color-contrast;
+  padding: 0.75em 1.25em;
+  font-family: $font-family-system-sans;
+  font-size: $font-size-small;
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear, opacity 0.1s linear;
+  
+  &:focus {
+    outline: 2px solid $color-contrast;
+    outline-offset: 2px;
+  }
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: $border-radius-medium;
+}
+
+// Inline code
+code {
+  border: 1px solid $color-contrast-5;
+  border-radius: $border-radius-small;
+  background-color: $color-base-2;
+  color: $color-contrast;
+  padding: 0.2em 0.4em;
+  font-size: 0.9em;
+  font-weight: 400;
+  vertical-align: baseline;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+// Code blocks
+pre {
+  border: 1px solid $color-contrast-5;
+  border-radius: $border-radius-medium;
+  background-color: $color-base;
+  color: $color-contrast;
+  padding: $spacing-50;
+  font-size: $font-size-small;
+  font-weight: 400;
+  line-height: 1.4;
+  overflow-x: auto;
+  margin: $spacing-60 0;
+  
+  code {
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+  }
+}
+
+// Blockquotes
+blockquote {
+  border-left: 1px solid currentColor;
+  padding: $spacing-10 $spacing-50;
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic;
+  line-height: inherit;
+  
+  cite {
+    color: $color-contrast-2;
+    font-family: $font-family-system-sans;
+    font-size: $font-size-x-small;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+
+// Lists
+ul, ol {
+  padding-left: $spacing-50;
+  margin-top: $spacing-60;
+  margin-bottom: $spacing-60;
+}
+
+// Separators
+hr {
+  border: none;
+  border-bottom: 1px solid $color-contrast-5;
+  margin: $spacing-70 0;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-system-sans;
+  line-height: 1.5;
+  margin-top: $spacing-70;
+  margin-bottom: $spacing-50;
+  
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h1 {
+  font-size: $font-size-large;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: $font-size-medium;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: $font-size-small;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: $font-size-x-small;
+  font-weight: 700;
+}
+
+h5 {
+  font-family: $font-family-body;
+  font-size: $font-size-medium;
+  font-weight: 700;
+}
+
+h6 {
+  font-family: $font-family-body;
+  font-size: $font-size-medium;
+  font-style: italic;
+}
+
+// Captions
+.caption,
+figcaption {
+  color: $color-contrast-2;
+  font-family: $font-family-system-sans;
+  font-size: $font-size-x-small;
+}
+
+// Helper classes
+.hide-empty:not(:has(*)) {
+  display: none !important;
+}
+
+// Placeholder styles
+::placeholder {
+  color: $color-contrast-2;
+}

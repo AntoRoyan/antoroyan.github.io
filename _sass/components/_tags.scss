@@ -1,0 +1,80 @@
+// Tags styling
+
+.post-tags {
+  margin-top: $spacing-30;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-20;
+  align-items: center;
+  
+  .tags-label {
+    font-size: $font-size-x-small;
+    font-weight: 500;
+    color: $color-contrast-2;
+    font-family: $font-family-system-sans;
+  }
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  font-size: $font-size-xx-small;
+  font-weight: 500;
+  font-family: $font-family-system-sans;
+  background-color: $color-contrast-5;
+  color: $color-contrast;
+  text-decoration: none;
+  border-radius: $border-radius-small;
+  border: 1px solid $color-contrast-4;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: $color-contrast;
+    color: $color-base;
+    text-decoration: none;
+  }
+}
+
+// Tags cloud on tags page
+.tags-cloud {
+  margin-bottom: $spacing-100;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-30;
+  
+  .tag-link {
+    display: inline-block;
+    padding: 0.5em 1em;
+    font-size: $font-size-small;
+    font-weight: 500;
+    font-family: $font-family-system-sans;
+    background-color: $color-base-2;
+    color: $color-contrast;
+    text-decoration: none;
+    border-radius: $border-radius-medium;
+    border: 1px solid $color-contrast-4;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background-color: $color-contrast;
+      color: $color-base;
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// Tag sections on tags page
+.tag-section {
+  margin-bottom: $spacing-100;
+  
+  .tag-title {
+    font-family: $font-family-system-sans;
+    font-size: $font-size-large;
+    font-weight: 600;
+    color: $color-contrast;
+    margin-bottom: $spacing-50;
+    padding-bottom: $spacing-20;
+    border-bottom: 2px solid $color-contrast-5;
+  }
+}

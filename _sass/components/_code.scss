@@ -1,0 +1,56 @@
+// Code highlighting and formatting
+
+// Inline code improvements
+p code,
+li code,
+td code {
+  background-color: $color-base-2;
+  border: 1px solid $color-contrast-5;
+  border-radius: $border-radius-small;
+  padding: 0.15em 0.35em;
+  font-size: 0.8em;
+  vertical-align: baseline;
+  line-height: 1;
+}
+
+// Code block containers
+.highlight,
+.highlighter-rouge {
+  margin: $spacing-60 0;
+  
+  pre {
+    margin: 0;
+    border-radius: $border-radius-medium;
+    overflow-x: auto;
+    
+    code {
+      display: block;
+      padding: $spacing-50;
+      background: none;
+      border: none;
+      font-size: $font-size-x-small;
+      line-height: 1.4;
+      white-space: pre;
+    }
+  }
+}
+
+// Prevent code from breaking layout
+code, pre {
+  word-wrap: break-word;
+}
+
+pre {
+  white-space: pre;
+  overflow-x: auto;
+}
+
+// Rouge syntax highlighting adjustments
+.highlight {
+  background: $color-base-2;
+  
+  .k { color: #0000ff; } // Keywords
+  .s { color: #008000; } // Strings  
+  .c { color: #808080; font-style: italic; } // Comments
+  .n { color: $color-contrast; } // Names
+}

@@ -1,0 +1,104 @@
+// Layout Components
+
+// Site Container
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-content {
+  flex: 1;
+  display: block;
+}
+
+// Content width constraints
+.content-container {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 $spacing-body-margin;
+  
+  &.wide {
+    max-width: $wide-width;
+  }
+  
+  &.full {
+    max-width: none;
+    padding: 0;
+  }
+}
+
+// Main content area
+main {
+  padding-top: $spacing-100;
+  padding-bottom: $spacing-100;
+}
+
+// Grid layouts
+.posts-grid {
+  display: grid;
+  gap: $spacing-100;
+  
+  &.two-columns {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-50;
+  }
+}
+
+// Columns layout (from WordPress patterns)
+.columns {
+  display: flex;
+  gap: $spacing-50;
+  flex-wrap: wrap;
+  
+  .column {
+    flex: 1;
+    min-width: 0;
+    
+    &.column-30 {
+      flex: 0 0 30%;
+    }
+    
+    &.column-70 {
+      flex: 0 0 70%;
+    }
+  }
+}
+
+// Spacing utilities
+.block-gap-sm { gap: $spacing-30; }
+.block-gap-md { gap: $spacing-50; }
+.block-gap-lg { gap: $spacing-100; }
+
+.margin-top-sm { margin-top: $spacing-50; }
+.margin-top-md { margin-top: $spacing-80; }
+.margin-top-lg { margin-top: $spacing-100; }
+
+.margin-bottom-sm { margin-bottom: $spacing-50; }
+.margin-bottom-md { margin-bottom: $spacing-80; }
+.margin-bottom-lg { margin-bottom: $spacing-100; }
+
+.padding-sm { padding: $spacing-50; }
+.padding-md { padding: $spacing-60; }
+.padding-lg { padding: $spacing-80; }
+
+// Alignment utilities
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+// Responsive utilities
+@media (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+  }
+  
+  .column.column-30,
+  .column.column-70 {
+    flex: 1;
+  }
+  
+  .posts-grid.two-columns {
+    grid-template-columns: 1fr;
+  }
+}

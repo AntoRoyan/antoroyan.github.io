@@ -1,0 +1,46 @@
+# Ignore Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ignore bundler config and cache
+/.bundle/
+/vendor/bundle/
+/vendor/cache/
+/vendor/gems/
+/vendor/ruby/
+
+# Ignore OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Ignore backup files
+*~
+*.swp
+*.swo
+
+# Ignore node modules if any
+node_modules/
+npm-debug.log*
+
+# Ignore backup files we created during conversion
+assets/fonts_backup/
+
+# Ignore development files
+*.log
+*.tmp
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# Ignore screenshot files
+screenshot.png
+*.screenshot.png

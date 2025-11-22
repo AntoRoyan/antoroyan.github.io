@@ -1,0 +1,45 @@
+<!-- Site Header -->
+<header class="site-header">
+    <div class="content-container wide">
+        <div class="header-content" style="border-bottom: 1px solid #EEEEEE; padding-top: 32px; padding-bottom: 32px;">
+            <div class="columns">
+                <div class="column">
+                    <div class="site-identity">
+                        <div class="site-branding" style="margin-bottom: 48px;">
+                            {% if site.title %}
+                            <h1 class="site-title">
+                                <a href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+                            </h1>
+                            {% endif %}
+                            
+                            {% if site.description %}
+                            <p class="site-tagline">{{ site.description | escape }}</p>
+                            {% endif %}
+                        </div>
+                        
+                        <nav class="site-navigation" aria-label="Main Navigation">
+                            <ul>
+                                {% for nav_item in site.site_config.navigation %}
+                                <li>
+                                    <a href="{{ nav_item.url | relative_url }}" 
+                                       {% if page.url == nav_item.url %}class="current"{% endif %}>
+                                        {{ nav_item.title }}
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                
+                <div class="column column-logo" style="flex-basis: 1em; text-align: right;">
+                    {% if site.site_config.logo %}
+                    <div class="site-logo">
+                        <img src="{{ site.site_config.logo | relative_url }}" alt="{{ site.title | escape }}" width="128">
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,62 @@
+// Button components
+
+.button,
+.btn {
+  display: inline-block;
+  border: 1px solid currentColor;
+  border-radius: $border-radius-small;
+  color: $color-base;
+  background-color: $color-contrast;
+  padding: 0.75em 1.25em;
+  font-family: $font-family-system-sans;
+  font-size: $font-size-small;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear, opacity 0.1s linear;
+  
+  &:hover {
+    opacity: 0.9;
+  }
+  
+  &:focus {
+    outline: 2px solid $color-contrast;
+    outline-offset: 2px;
+  }
+  
+  // Button variations
+  &.outline {
+    background-color: transparent;
+    color: $color-contrast;
+    border-width: 1px;
+    padding: calc(0.75em - 1px) calc(1.25em - 1px);
+  }
+  
+  &.large {
+    padding: 1em 1.5em;
+    font-size: $font-size-medium;
+  }
+  
+  &.small {
+    padding: 0.5em 1em;
+    font-size: $font-size-x-small;
+  }
+}
+
+// Button groups
+.buttons,
+.button-group {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  
+  &.center {
+    justify-content: center;
+  }
+  
+  &.right {
+    justify-content: flex-end;
+  }
+}

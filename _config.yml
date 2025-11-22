@@ -1,0 +1,83 @@
+# Jekyll Configuration for Anto Royan's Blog
+title: Anto Royan's Blog
+description: My personal blog about science, cheminformatics, data, tech, programming, and life.
+url: "https://antoroyan.github.io"
+baseurl: ""
+author: Anto Royan
+email: m.antoroyan@gmail.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+# Plugins (GitHub Pages compatible)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Collections (none needed for basic blog)
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Pagination
+paginate: 10
+paginate_path: "/page:num/"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+
+# Site settings
+site_config:
+  # Navigation links
+  navigation:
+    - title: "Blog"
+      url: "/"
+    - title: "Tags"
+      url: "/tags/"
+    - title: "About"
+      url: "/about/"
+    - title: "Contact"
+      url: "/contact/"
+  
+  # Social links
+  social:
+    twitter: "antoroyan_"
+    linkedin: "anto-royan-688380151"
+    github: "AntoRoyan"
+    rss: true
+  
+  # Site logo
+  logo: "/assets/images/logo.png"
+
+# SEO defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Anto Royan"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: "pages"
+    values:
+      layout: "page"

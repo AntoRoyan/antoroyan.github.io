@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    {% seo %}
+    
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
+    
+    <!-- Preload fonts -->
+    <link rel="preload" href="{{ '/assets/fonts/newsreader/newsreader-var.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/assets/fonts/newsreader/newsreader-var-italic.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+    <div class="site">
+        {% include header.html %}
+        
+        <main class="site-content" role="main">
+            {{ content }}
+        </main>
+        
+        {% include footer.html %}
+    </div>
+    
+    {% if jekyll.environment == 'production' %}
+        <!-- Add analytics code here if needed -->
+    {% endif %}
+</body>
+</html>

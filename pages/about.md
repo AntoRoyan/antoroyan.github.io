@@ -19,6 +19,7 @@ Outside of work, I enjoy music, reading, movies, and playing badminton and crick
 
 I love learning new things, breaking them down, and building something with them. This blog is where I write about that process: whether it's science, cheminformatics, data, tech, programming, or thoughts from everyday life.
 
+If you want to subscribe to new posts, see the [RSS page](/rss/) for details.
 
 ---
 

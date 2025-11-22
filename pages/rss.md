@@ -4,8 +4,6 @@ title: RSS Feed
 permalink: /rss/
 ---
 
-## 📡 RSS Feed
-
 Subscribe to new posts using this feed URL:
 
 ```

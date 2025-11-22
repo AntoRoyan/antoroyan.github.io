@@ -52,37 +52,49 @@
                         </div>
                         
                         <nav class="site-navigation" aria-label="Main Navigation">
-                            <ul>
+                            <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+                            <label for="nav-toggle" class="nav-toggle-label">
+                                <span class="hamburger-line"></span>
+                                <span class="hamburger-line"></span>
+                                <span class="hamburger-line"></span>
+                            </label>
+                            <div class="nav-menu">
                                 
-                                <li>
-                                    <a href="/" 
-                                       class="current">
-                                        Blog
-                                    </a>
-                                </li>
+                                <a href="/" 
+                                   class="nav-link current">
+                                    Blog
+                                </a>
                                 
-                                <li>
-                                    <a href="/tags/" 
-                                       >
-                                        Tags
-                                    </a>
-                                </li>
+                                <a href="/tags/" 
+                                   class="nav-link">
+                                    Tags
+                                </a>
                                 
-                                <li>
-                                    <a href="/about/" 
-                                       >
-                                        About
-                                    </a>
-                                </li>
+                                <a href="/about/" 
+                                   class="nav-link">
+                                    About
+                                </a>
                                 
-                                <li>
-                                    <a href="/contact/" 
-                                       >
-                                        Contact
-                                    </a>
-                                </li>
+                                <a href="/contact/" 
+                                   class="nav-link">
+                                    Contact
+                                </a>
                                 
-                            </ul>
+                            </div>
+                            
+                            <script>
+                            // Inline JavaScript for immediate functionality
+                            document.addEventListener('DOMContentLoaded', function() {
+                                const navLinks = document.querySelectorAll('.nav-link');
+                                const navToggle = document.getElementById('nav-toggle');
+                                
+                                navLinks.forEach(function(link) {
+                                    link.addEventListener('click', function() {
+                                        navToggle.checked = false;
+                                    });
+                                });
+                            });
+                            </script>
                         </nav>
                     </div>
                 </div>

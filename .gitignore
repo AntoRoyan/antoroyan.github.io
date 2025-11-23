@@ -25,22 +25,5 @@ Thumbs.db
 *.swp
 *.swo
 
-# Ignore node modules if any
-node_modules/
-npm-debug.log*
-
-# Ignore backup files we created during conversion
-assets/fonts_backup/
-
 # Ignore development files
 *.log
-*.tmp
-
-# Ignore IDE files
-.vscode/
-.idea/
-*.sublime-*
-
-# Ignore screenshot files
-screenshot.png
-*.screenshot.png

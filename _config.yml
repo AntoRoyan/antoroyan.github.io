@@ -18,8 +18,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
 
-# Collections (none needed for basic blog)
-
 # Sass
 sass:
   sass_dir: _sass
@@ -73,11 +71,7 @@ defaults:
       layout: "post"
       author: "Anto Royan"
   - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-  - scope:
       path: "pages"
+      type: "pages"
     values:
       layout: "page"

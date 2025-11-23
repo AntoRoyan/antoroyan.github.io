@@ -22,11 +22,6 @@
     max-width: $wide-width;
   }
   
-  &.full {
-    max-width: none;
-    padding: 0;
-  }
-  
   @media (max-width: 768px) {
     padding: 0 $spacing-40;
     
@@ -43,15 +38,50 @@ main {
   padding-bottom: $spacing-100;
 }
 
+// Site header specific layout
+.header-content {
+  border-bottom: 1px solid $color-contrast-5;
+  padding-top: $spacing-60;
+  padding-bottom: $spacing-60;
+}
+
+.site-branding {
+  margin-bottom: $spacing-90;
+}
+
+.column-logo {
+  flex-basis: 1em;
+  text-align: right;
+}
+
+// Site footer specific layout
+.footer-content {
+  border-top: 1px solid $color-contrast-5;
+  border-bottom: 1px solid $color-contrast-5;
+  padding-top: $spacing-80;
+  padding-bottom: $spacing-80;
+}
+
+.footer-heading {
+  font-size: $font-size-small;
+}
+
+.footer-bottom {
+  padding-top: $spacing-60;
+  padding-bottom: $spacing-60;
+  color: $color-contrast-2;
+  font-family: $font-family-system-sans;
+  font-size: $font-size-x-small;
+  
+  .copyright {
+    gap: 0.275em;
+  }
+}
+
 // Grid layouts
 .posts-grid {
   display: grid;
   gap: $spacing-100;
-  
-  &.two-columns {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: $spacing-50;
-  }
 }
 
 // Columns layout (from WordPress patterns)
@@ -67,34 +97,8 @@ main {
     &.column-30 {
       flex: 0 0 30%;
     }
-    
-    &.column-70 {
-      flex: 0 0 70%;
-    }
   }
 }
-
-// Spacing utilities
-.block-gap-sm { gap: $spacing-30; }
-.block-gap-md { gap: $spacing-50; }
-.block-gap-lg { gap: $spacing-100; }
-
-.margin-top-sm { margin-top: $spacing-50; }
-.margin-top-md { margin-top: $spacing-80; }
-.margin-top-lg { margin-top: $spacing-100; }
-
-.margin-bottom-sm { margin-bottom: $spacing-50; }
-.margin-bottom-md { margin-bottom: $spacing-80; }
-.margin-bottom-lg { margin-bottom: $spacing-100; }
-
-.padding-sm { padding: $spacing-50; }
-.padding-md { padding: $spacing-60; }
-.padding-lg { padding: $spacing-80; }
-
-// Alignment utilities
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
 
 // Responsive utilities
 @media (max-width: 768px) {
@@ -102,12 +106,9 @@ main {
     flex-direction: column;
   }
   
-  .column.column-30,
-  .column.column-70 {
+  .column.column-30 {
     flex: 1;
   }
   
-  .posts-grid.two-columns {
-    grid-template-columns: 1fr;
-  }
+
 }

@@ -1,5 +1,5 @@
 ---
-date: 2024-11-22
+date: 2025-11-22
 title: "Building My Personal Blog: A Jekyll Journey"
 author: "Anto Royan"
 excerpt: "The story behind creating this blog - from concept to deployment, exploring Jekyll, GitHub Pages, and modern web development."
